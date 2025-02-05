@@ -7,8 +7,8 @@ const axios = require("axios");
  */
 const fetchFunFact = async (num) => {
   try {
-    const response = await axios.get(`https://numbersapi.com/${num}/math?json`);
-    return response.data.text;
+    const response = await axios.get(`http://numbersapi.com/${num}`);
+    return response.data;
   } catch (error) {
     return "No fun fact available.";
   }
