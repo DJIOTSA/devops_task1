@@ -13,5 +13,5 @@ const fetchFunFact = async (num) => {
     return "No fun fact available.";
   }
 };
-
-module.exports = { fetchFunFact };
+//localhost:3000/api/classify-number?number=42
+http: module.exports = { fetchFunFact };
