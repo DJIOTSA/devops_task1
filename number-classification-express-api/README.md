@@ -66,8 +66,8 @@ Classifies a number and returns its mathematical properties and a fun fact.
 ### **Steps to Run Locally**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/number-classification-api.git
-   cd number-classification-api
+   git clone git@github.com:DJIOTSA/devops_task1.git
+   cd number-classification-express-api
    ```
 
 2. Install dependencies:
