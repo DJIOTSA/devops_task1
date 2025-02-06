@@ -27,16 +27,16 @@ app.get("/api/classify-number", async (req, res) => {
   const originalNumber = number;
   number = number.trim();
 
-  // Attempt to parse the number
-  const num = parseInt(number, 10);
-
-  // Validate if it's a valid integer
-  if (isNaN(num)) {
+  // Ensure the input contains only valid integer characters
+  if (!/^-?\d+$/.test(number)) {
     return res.status(400).json({
       number: originalNumber,
       error: true,
     });
   }
+
+  // Convert to integer
+  const num = parseInt(number, 10);
 
   // Proceed with classification and fetching fun facts
   const properties = classifyNumber(num);
@@ -51,6 +51,7 @@ app.get("/api/classify-number", async (req, res) => {
     fun_fact: funFact,
   });
 });
+
 
 
 app.listen(port, () => {
